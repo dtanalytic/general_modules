@@ -4,7 +4,7 @@ import time
 
 
 def get_url_delay(delay,url):
-
+    
         session = requests.Session()
         user_agent_list = [
             # Chrome
@@ -37,9 +37,7 @@ def get_url_delay(delay,url):
                       'http://list.np.by/','http://catalog.svich.com/','http://www.url.by/','http://www.rambler.ru/','http://www.mail.ru/','http://www.aport.ru/','http://www.lycos.ru/','http://www.nigma.ru/']
         referer= random.choice(referer_list)
         user_agent = random.choice(user_agent_list)
-        # Set the headers
         headers = {'User-Agent': user_agent, "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8", 'Accept-Language': 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7','Referer':referer}
-
 
         req = session.get(url, headers=headers)
 
